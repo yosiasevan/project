@@ -20,7 +20,7 @@ class _ResiTrackingAppState extends State<ResiTrackingApp> {
   Map<String, String> _courierApiUrls = {
     'jne': 'https://api.binderbyte.com/v1/track?api_key=4099debe0dcf2f5ecd13c57f5ed043a6e7ed45c8d8175455712822fd374f738a&courier=jne&awb=8825112045716759',
     'tiki': 'https://api.binderbyte.com/v1/track?api_key=4099debe0dcf2f5ecd13c57f5ed043a6e7ed45c8d8175455712822fd374f738a&courier=tiki&awb=030205696069',
-    'sicepat': 'https://api.binderbyte.com/v1/track?api_key=4099debe0dcf2f5ecd13c57f5ed043a6e7ed45c8d8175455712822fd374f738a&courier=sicepat&awb=000779194122',
+    'pos': 'https://api.binderbyte.com/v1/track?api_key=4099debe0dcf2f5ecd13c57f5ed043a6e7ed45c8d8175455712822fd374f738a&courier=pos&awb=18022470553',
   };//_courierApiUrls (baris 20-23) adalah sebuah Map yang menyimpan URL API untuk masing-masing kurir. Setiap kurir memiliki URL API yang berbeda dan diakses melalui kunci yang sesuai.
 
   Future<void> _trackResi() async {
@@ -109,8 +109,8 @@ class _ResiTrackingAppState extends State<ResiTrackingApp> {
                         child: Text('TIKI'),
                       ),
                       DropdownMenuItem<String>(
-                        value: 'sicepat',
-                        child: Text('SiCepat'),
+                        value: 'pos',
+                        child: Text('POS'),
                       ),
                     ],
                   ),
@@ -171,5 +171,5 @@ void main() {
 // tiki
 // 030205696069
 
-// sicepat
-// 000779194122
+// pos
+// 18022470553
